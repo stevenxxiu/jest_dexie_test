@@ -1,0 +1,16 @@
+{
+  "name": "jest-dexie-test",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.7",
+    "@indexeddbshim/indexeddbshim": "^6.4.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "dexie": "^3.0.1",
+    "jsdom": "16.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
