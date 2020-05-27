@@ -9,6 +9,7 @@ test('test', async () => {
   })
   setGlobalVars(window)
   global.XMLHttpRequest = window.XMLHttpRequest
+  global.Blob = window.Blob;
 
   URL.createObjectURL = createObjectURL
   XMLHttpRequest.prototype.overrideMimeType = xmlHttpRequestOverrideMimeType()
