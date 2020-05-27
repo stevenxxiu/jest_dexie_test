@@ -1,7 +1,6 @@
 import Dexie from 'dexie'
 import setGlobalVars from '@indexeddbshim/indexeddbshim'
 import { JSDOM } from 'jsdom'
-import { createObjectURL, xmlHttpRequestOverrideMimeType} from 'typeson-registry/polyfills/createObjectURL-cjs.js'
 
 test('test', async () => {
   const { window } = new JSDOM('',  {
@@ -9,7 +8,9 @@ test('test', async () => {
   })
   setGlobalVars(window)
   global.XMLHttpRequest = window.XMLHttpRequest
+  global.Blob = window.Blob;
 
+  const { createObjectURL, xmlHttpRequestOverrideMimeType} = await import('typeson-registry/polyfills/createObjectURL-cjs.js');
   URL.createObjectURL = createObjectURL
   XMLHttpRequest.prototype.overrideMimeType = xmlHttpRequestOverrideMimeType()
 
