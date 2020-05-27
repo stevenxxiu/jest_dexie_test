@@ -5,7 +5,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.7",
-    "@indexeddbshim/indexeddbshim": "^6.4.0",
+    "@indexeddbshim/indexeddbshim": "^6.5.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "dexie": "^3.0.1",
     "jest": "^26.0.1",
